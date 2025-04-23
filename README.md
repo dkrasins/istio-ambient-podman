@@ -3,7 +3,7 @@ Resources to reproduce an issue with Istio Ambient mode and Podman.  If Podman i
 
 # Reproducing
 
-If you have [Oracle Cloud Native Environment](github.com/oracle-cne/ocne) installed, you can just run `sh bug.sh`.  Otherwise, install Kubernetes and Istio in ambient mode via [the Istio Ambient mode installation guide](https://istio.io/latest/docs/ambient/install/helm/) and remove the cluster provisioning step from `bug.sh`.
+If you have [Oracle Cloud Native Environment](github.com/oracle-cne/ocne) installed, you can just run `sh bug.sh`.  Otherwise, provision a Kubernetes cluster and run `sh bug.sh --nocne`.
 
 # Results
 
