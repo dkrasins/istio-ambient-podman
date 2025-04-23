@@ -1,0 +1,29 @@
+name: ambient-curl
+headless: true
+workerNodes: 1
+providers:
+  libvirt:
+    controlPlaneNode:
+      storage: 256Gi
+      memory: 32Gi
+      cpu: 4
+    workerNode:
+      storage: 256Gi
+      memory: 32Gi
+      cpu: 4
+
+applications:
+- name: istio-base
+  release: istio-base
+  namespace: istio-system
+- name: istiod
+  release: istiod
+  namespace: istio-system
+  configFrom: ambient.yaml
+- name: istio-cni
+  release: istio-cni
+  namespace: istio-system
+  configFrom: ambient.yaml
+- name: istio-ztunnel
+  release: ztunnel
+  namespace: istio-system
